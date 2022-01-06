@@ -1,11 +1,12 @@
 import { useState } from "react";
-
+import './Todo.scss'
 const TodoList = () => {
   const [Tasks, setTask] = useState([]);
   const [newTask, setNewTask] = useState('');
 
   const addTask = () => {
     setTask(prevState => [...prevState, {id: Date.now(), text: newTask}]);
+    setNewTask('');
   }
 
   const inputTracker = (e) => {
@@ -19,12 +20,12 @@ const TodoList = () => {
   return (
     <div className="">
       <div className="form">
-        <input onChange={inputTracker} type="text"/>
-        <button onClick={addTask}>Do some magic</button>
+        <input className="form__input" onChange={inputTracker} value={newTask} type="text"/>
+        <button className="form__btn" onClick={addTask}>Do some magic</button>
       </div>
       <div className="tasks">
         {Tasks.map((task) => 
-          <li key={task.id} onClick={() => deleteTask(task.id)}>{task.text}</li>
+          <li className="tasks__task" key={task.id} onClick={() => deleteTask(task.id)}>{task.text}</li>
         )}
       </div>
     </div>

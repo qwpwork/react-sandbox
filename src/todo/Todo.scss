@@ -1,0 +1,41 @@
+.form {
+  padding-top: 15px;
+  &__input {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid black;
+    outline: none;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  &__btn{
+    background-color: transparent;
+    font-size: 14px;
+    border: 2px solid black;
+    border-radius: 5px;
+    outline: 0;
+    transition: 0.3s ease-in-out;
+    font-weight: 700;
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      background-color: black;
+    }
+  }
+  &__input, &__btn {
+    padding: 5px;
+  }
+}
+
+.tasks {
+  margin-top: 20px;
+  list-style: none;
+  font-size: 24px;
+  color: #4a4a4a;
+  &__task {
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
