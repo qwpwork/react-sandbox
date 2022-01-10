@@ -2,9 +2,9 @@
 .App {
   background-color: #f2f2f2;
 }
-ul {
+nav {
   display: flex;
-  li {
+  .item {
     color: #4a4a4a;
     list-style: none;
     flex-wrap: wrap;

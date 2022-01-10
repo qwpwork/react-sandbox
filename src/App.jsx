@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.scss';
 import Counter from './counter/Counter.jsx'
 import Todo from './todo/Todo.jsx'
+import Weather from './weather/Weather.jsx'
 import { getDefaultNormalizer } from '@testing-library/react';
 
 import { 
@@ -16,20 +17,18 @@ function App() {
     <div className='App'>
       <Router>
         <nav>
-          <ul>
-            <li>
-              <Link to="/counter">Counter</Link>
-            </li>
-            <li>
-            <Link to="/todo">Todo</Link>
-            </li>
-          </ul>
+          <Link className='item' to="/counter">Counter</Link>
+          <Link className='item' to="/todo">Todo</Link>
+          <Link className='item' to="/weather">Weather</Link>
         </nav>
+
         <Routes>
           <Route path="/counter" element={<Counter />} />
           <Route path="/Todo" element={<Todo />} />
+          <Route path="/weather" element={<Weather />} />
         </Routes>
       </Router>
+      
     </div>
   );
 }
